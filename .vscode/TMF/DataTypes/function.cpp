@@ -10,7 +10,6 @@ using namespace std;
     //parameterized
     //non parameterized
 
-
 // void printNumber(){
 //     cout<<"hey Jan!";
 // }
