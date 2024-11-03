@@ -51,3 +51,6 @@ int main(){
     cout<<"Maximum element is: "<<minmax.max<<endl;
     return 0;
 }
+
+// T.C. :- O(n)
+// S.C. :- O(1)
