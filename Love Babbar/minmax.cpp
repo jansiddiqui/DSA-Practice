@@ -37,28 +37,3 @@ int main(){
 
 //Time Complexity O(N)
 //Auxiliary Space O(1)
-
-class Solution {
-  public:
-    pair<long long, long long> getMinMax(vector<long long int> arr) {
-        int setmini(int A[], int N){
-    int mini = INT_MAX;
-    for (int i=0;i<N;i++){
-        if(A[i]<mini){
-            mini = A[i];
-        }
-    }
-    return mini;
-}
-
-int setmaxi(int A[], int N){
-    int maxi = INT_MIN;
-    for(int i=0; i<N; i++){
-        if(A[i]>maxi){
-            maxi = A[i];
-        }
-    }
-    return maxi;
-}
-    }
-};
