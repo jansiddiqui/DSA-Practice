@@ -31,3 +31,6 @@ int main(){
     cin>>K;
     cout<<"Kth Smallest Element is: "<<kthSamllest(arr, N, K);
 }
+
+// TC :- O(N*log(K))
+// SC :- O(K)
