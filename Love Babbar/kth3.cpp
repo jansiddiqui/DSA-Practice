@@ -30,3 +30,6 @@ int main(){
     int k=2;
     cout<<"The "<<k<<"th smallest element is "<<kthSmallest(arr, n, k)<<endl;
 }
+
+// TC :- O(N + max_element)
+// SC :- O(max_element)
