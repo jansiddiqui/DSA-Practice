@@ -1,3 +1,5 @@
+// Move all negative numbers to beginning and positive to end with onstant extra space
+// Naive Approach
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -13,3 +15,6 @@ int main(){
     }
     return 0;
 }
+
+// TC:- O(n*log(n))
+// SC:- O(1)
