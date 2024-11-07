@@ -34,3 +34,6 @@ int main(){
     display(arr,arr_size-1);
     return 0;
 }
+
+// TC := O(N)
+// SC := O(1)
