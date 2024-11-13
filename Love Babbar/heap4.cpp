@@ -24,7 +24,7 @@ void printKMax(const vector<int>& a, int k){
 }
 int main(){
     vector<int> a={12, 1, 67, 89, 56, 98, 90};
-    int k=4;
+    int k=2;
     printKMax(a, k);
     return 0;
 }
