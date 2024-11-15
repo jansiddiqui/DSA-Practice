@@ -98,16 +98,73 @@ struct AVLwithparent* Insert(
             }
         }
         else if(root->key>key){
-            root->left = Insert(root->left, root, key){
-                int firstheight =0;
-                int secondheight = 0;
-                if(root->left!= NULL){
-                    firstheight = root->left->height;
+            root->left = Insert(root->left, root, key);
+            int firstheight =0;
+            int secondheight = 0;
+            if(root->left!= NULL){
+                firstheight = root->left->height;
+            }
+            if(root->right != NULL){
+                    secondheight = root->right->height;
+            }
+            if(abs(firstheight - secondheight) == 2){
+                if(root->left != NULL && key<root->left->key){
+                    root = LLR(root);
                 }
-                if(root->right != NULL){
-                    secondheight = root-
+                else{
+                    root = RLR(root);
                 }
-
             }
         }
+        else if(root->key<key){
+            root->right = Insert(root->right, root, key);
+            int firstheight = 0;
+            int secondheight = 0;
+            if(root->left != NULL){
+                firstheight = root->left->height;
+            }
+            if(root->right != NULL){
+                secondheight = root->right->height;
+            }
+            if(abs(firstheight -secondheight) == 2){
+                if(root->right != NULL && key<root->key){
+                    root = RLR(root);
+                }
+                else{
+                    root = LLR(root);
+                }
+            }
+        }
+        else{
+
+        }
+        Updateheight(root);
+        return root;
     }
+void printpreorder(struct AVLwithparent* root){
+    cout<<"Node: "<<root->key<<", Parent Node: ";
+    if(root->par != NULL){
+        cout<<root->par->key<<endl;
+    }
+    else{
+        cout<<"NULL"<<endl;
+    }
+    if(root->left != NULL){
+        printpreorder(root->left);
+    }
+    if(root->right != NULL){
+        printpreorder(root->right);
+    }
+}
+
+int main(){
+    struct AVLwithparent* root;
+    root = NULL;
+    root = Insert(root, NULL, 10);
+    root = Insert(root, NULL, 20);
+    root = Insert(root, NULL, 30);
+    root = Insert(root, NULL, 40);
+    root = Insert(root, NULL, 50);
+    root = Insert(root, NULL, 25);
+    printpreorder(root);
+}
