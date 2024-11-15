@@ -8,14 +8,14 @@ void maxHeapify(vector<int>& arr, int n, int idx){
     int l = 2*idx+1;
     int r = 2*idx+2;
     int max = idx;
-    if(l<n && arr[1]>arr[idx]){
+    if(l<n && arr[l]>arr[idx]){
         max = l;
     }
     if(r<n && arr[r]>arr[max]){
         max = r;
     }
     if(max != idx){
-        swap(arr[idx], arr[idx]);
+        swap(arr[idx], arr[max]);
         maxHeapify(arr, n,max);
     }
 }
