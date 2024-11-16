@@ -7,11 +7,10 @@ vector<int> mergeHeaps(vector<int>& a, vector<int>& b, int n, int m){
     for(int i=0; i<n; i++){
         maxHeap.push(a[i]);
     }
-
     for(int i = 0; i<m; i++){
         maxHeap.push(b[i]);
     }
-
+    
     vector<int> merged;
 
     while(!maxHeap.empty()){
