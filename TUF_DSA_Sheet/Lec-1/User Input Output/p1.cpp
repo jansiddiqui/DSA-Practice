@@ -8,10 +8,12 @@ using namespace std;
 int main(){
     int age;
     cin >> age;
-    if(age>=18){
-        cout<<"Yes";
+    if(age>=18 && age < 30){
+        cout<<"Yes, u are an adult";
+    }else if(age<18 && age>0){
+        cout<<"No, u are not adult";
     }else{
-        cout<<"No";
+        cout<<"Invalid Input";
     }
     return 0;
 }
